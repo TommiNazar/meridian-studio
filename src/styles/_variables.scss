@@ -1,0 +1,35 @@
+// Nueva paleta de colores (basada en la imagen)
+$green-dark: #042F1E;
+$green-secondary: #0A3D27;
+$green-tertiary: #0F4F33;
+$green-light: #2F6B4A;
+$cream-bg: #FFF5E4;   // fondo crema para about y work (el que indicaste)
+
+// Mantenemos algunos colores auxiliares
+$white: #ffffff;
+$black: #000000;
+$text-dark: #1a1a1a;
+
+// Tipografía
+$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1280px;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 6rem;
+
+// Shadows
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+
+// Transitions
+$transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

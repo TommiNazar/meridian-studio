@@ -1,0 +1,82 @@
+@import 'variables';
+
+.work {
+  background: $cream-bg; // mismo crema que about
+
+  .work-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: $green-dark;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: $green-secondary;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .demo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .demo-card {
+    background: $white;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: $shadow-sm;
+    border: 1px solid rgba($green-dark, 0.1);
+    transition: $transition-base;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $shadow-lg;
+    }
+
+    video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: $green-light;
+      display: block;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1.25rem 1.5rem 1.5rem;
+
+      h4 {
+        font-weight: 600;
+        color: $green-dark;
+        margin-bottom: 0.25rem;
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: lighten($text-dark, 20%);
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .demo-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .demo-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .work-header h2 { font-size: 1.8rem; }
+  }
+}

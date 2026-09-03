@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'navbar';
+@import 'hero';
+@import 'about';
+@import 'work';
+@import 'footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $cream-bg;
+  color: $text-dark;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+section {
+  padding: $spacing-xl 0;
+}
+
+@media (max-width: $tablet) {
+  section {
+    padding: $spacing-lg 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .container {
+    padding: 0 $spacing-sm;
+  }
+}

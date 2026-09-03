@@ -1,0 +1,76 @@
+@import 'variables';
+
+.hero {
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: $green-dark;
+  padding: 0 2rem;
+
+  .hero-content {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-logo {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 20px; // bordes redondeados
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); // sombra profesional
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    // Si el logo tiene fondo blanco, esto ayuda a que se vea integrado
+    background: transparent;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $cream-bg;
+    background: rgba($black, 0.15);
+    padding: 0.5rem 2rem;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-cta {
+    button {
+      background: $cream-bg;
+      color: $green-dark;
+      border: none;
+      padding: 0.8rem 2.8rem;
+      border-radius: 50px;
+      font-family: $font-primary;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: $transition-base;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+        background: darken($cream-bg, 8%);
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .hero-logo { max-width: 350px; }
+    .hero-subtitle { font-size: 1rem; }
+  }
+
+  @media (max-width: $mobile) {
+    .hero-logo { max-width: 250px; }
+    .hero-subtitle { font-size: 0.9rem; padding: 0.4rem 1.2rem; }
+  }
+}
