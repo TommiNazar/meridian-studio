@@ -1,17 +1,13 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
-import demo1 from '../assets/videos/demo1.mp4';
-import demo2 from '../assets/videos/demo2.mp4';
-import demo3 from '../assets/videos/demo3.mp4';
 
 const Work = () => {
   const { language } = useLanguage();
   const t = translations[language];
-  const demos = t.work.demos; // usamos las descripciones traducidas
+  const demos = t.work.demos;
 
-  // Las rutas de video son fijas, solo cambian los textos
-  const videoFiles = [demo1, demo2, demo3];
+  const videoId = "7Va5X4p7HUE"; // Tu demo de YouTube
 
   return (
     <section id="work" className="work">
@@ -23,10 +19,15 @@ const Work = () => {
         <div className="demo-grid">
           {demos.map((demo, index) => (
             <div key={index} className="demo-card">
-              <video controls preload="metadata">
-                <source src={videoFiles[index]} type="video/mp4" />
-                Tu navegador no soporta el elemento de video.
-              </video>
+              <div className="video-wrapper">
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title={demo.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
               <div className="card-body">
                 <h4>{demo.title}</h4>
                 <p>{demo.description}</p>
