@@ -7,7 +7,7 @@ const Work = () => {
   const t = translations[language];
   const demos = t.work.demos;
 
-  const videoId = "7Va5X4p7HUE"; // Tu demo de YouTube
+  const videoId = "1224179052"; // https://player.vimeo.com/video/1224179052
 
   return (
     <section id="work" className="work">
@@ -21,7 +21,7 @@ const Work = () => {
             <div key={index} className="demo-card">
               <div className="video-wrapper">
                 <iframe
-                  src={`https://www.youtube.com/embed/${videoId}`}
+                  src={`https://player.vimeo.com/video/${videoId}`}
                   title={demo.title}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
