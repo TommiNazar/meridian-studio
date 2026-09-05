@@ -7,7 +7,12 @@ const Work = () => {
   const t = translations[language];
   const demos = t.work.demos;
 
-  const videoId = "1224179052"; // https://player.vimeo.com/video/1224179052
+  // IDs de los videos de ScreenPal
+  const videoIds = [
+    "cOQhhLnwvqS",  // Demo 1
+    "cOQh11nwvYZ",  // Demo 2
+    "cOQhhLnwvqS"   // Demo 3 (repetido)
+  ];
 
   return (
     <section id="work" className="work">
@@ -21,7 +26,7 @@ const Work = () => {
             <div key={index} className="demo-card">
               <div className="video-wrapper">
                 <iframe
-                  src={`https://player.vimeo.com/video/${videoId}`}
+                  src={`https://player.screenpal.com/embed/${videoIds[index]}`}
                   title={demo.title}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
