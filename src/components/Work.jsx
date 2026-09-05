@@ -7,11 +7,11 @@ const Work = () => {
   const t = translations[language];
   const demos = t.work.demos;
 
-  // IDs de los videos de ScreenPal
-  const videoIds = [
-    "cOQhhLnwvqS",  // Demo 1
-    "cOQh11nwvYZ",  // Demo 2
-    "cOQhhLnwvqS"   // Demo 3 (repetido)
+  // URLs completas de los videos de ScreenPal (con todos los parámetros)
+  const videoUrls = [
+    "https://go.screenpal.com/player/cOQhhLnwvqS?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1",
+    "https://go.screenpal.com/player/cOQh11nwvYZ?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1",
+    "https://go.screenpal.com/player/cOQhhLnwvqS?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" // Demo 3 repetido
   ];
 
   return (
@@ -26,11 +26,19 @@ const Work = () => {
             <div key={index} className="demo-card">
               <div className="video-wrapper">
                 <iframe
-                  src={`https://player.screenpal.com/embed/${videoIds[index]}`}
+                  src={videoUrls[index]}
                   title={demo.title}
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                   allowFullScreen
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    border: 0,
+                  }}
                 ></iframe>
               </div>
               <div className="card-body">
