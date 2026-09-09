@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
-import logoSmall from '../assets/images/logonav.png'; // Usamos el mismo logo, escalado
+import logoSmall from '../assets/images/logonav.png';
 
 const Navbar = () => {
   const { language, toggleLanguage } = useLanguage();

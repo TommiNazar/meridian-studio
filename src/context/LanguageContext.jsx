@@ -2,7 +2,8 @@ import React, { createContext, useState, useContext } from 'react';
 
 const getInitialLanguage = () => {
   const saved = localStorage.getItem('language');
-  return saved === 'en' ? 'en' : 'es';
+  // Predeterminado inglés si no hay valor guardado
+  return saved === 'es' ? 'es' : 'en';
 };
 
 const LanguageContext = createContext();
