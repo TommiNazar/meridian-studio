@@ -7,11 +7,10 @@ const Work = () => {
   const t = translations[language];
   const demos = t.work.demos;
 
-  // URLs completas de los videos de ScreenPal (con todos los parámetros)
   const videoUrls = [
+    "https://go.screenpal.com/player/cOQQnZnwBFB?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1",
     "https://go.screenpal.com/player/cOQhhLnwvqS?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1",
-    "https://go.screenpal.com/player/cOQh11nwvYZ?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1",
-    "https://go.screenpal.com/player/cOQhhLnwvqS?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" // Demo 3 repetido
+    "https://go.screenpal.com/player/cOQh11nwvYZ?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
   ];
 
   return (
@@ -40,10 +39,6 @@ const Work = () => {
                     border: 0,
                   }}
                 ></iframe>
-              </div>
-              <div className="card-body">
-                <h4>{demo.title}</h4>
-                <p>{demo.description}</p>
               </div>
             </div>
           ))}

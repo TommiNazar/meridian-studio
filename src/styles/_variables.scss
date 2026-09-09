@@ -1,18 +1,17 @@
-// Nueva paleta de colores (basada en la imagen)
-$green-dark: #042F1E;
+// Paleta de colores
+$green-dark: #024124;
 $green-secondary: #0A3D27;
 $green-tertiary: #0F4F33;
 $green-light: #2F6B4A;
-$cream-bg: #FFF5E4;   // fondo crema para about y work (el que indicaste)
+$cream-bg: #fff6e5;
 
-// Mantenemos algunos colores auxiliares
 $white: #ffffff;
 $black: #000000;
 $text-dark: #1a1a1a;
 
-// Tipografía
-$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-$font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+// Tipografías
+$font-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-display: 'Bebas Neue', 'Montserrat', sans-serif; // Para el tagline
 
 // Breakpoints
 $mobile: 768px;

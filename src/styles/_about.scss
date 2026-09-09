@@ -1,64 +1,39 @@
 @import 'variables';
 
-.about {
-  background: $cream-bg; // crema
+.about-section {
+  background: $cream-bg;
+  padding: $spacing-xl 0;
+
+  .container {
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+  }
 
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
   }
 
   .about-text {
     h2 {
-      font-size: 2.4rem;
-      font-weight: 500;
-      letter-spacing: -0.5px;
+      font-family: $font-primary;
+      font-weight: 700; // negrita
+      font-size: 1.2rem; // mismo tamaño que el texto normal
       color: $green-dark;
       margin-bottom: 1.5rem;
+      letter-spacing: -0.3px;
     }
 
     p {
+      font-family: $font-primary;
+      font-weight: 400;
       font-size: 1.05rem;
+      line-height: 1.8;
       color: $text-dark;
       margin-bottom: 1.25rem;
-      line-height: 1.7;
-
-      .highlight {
-        color: $green-secondary;
-        font-weight: 500;
-      }
-    }
-
-    .about-values {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 2rem;
-
-      .value-item {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        background: rgba($white, 0.6);
-        padding: 0.7rem 1.2rem;
-        border-radius: 12px;
-        border-left: 4px solid $green-dark;
-
-        i {
-          color: $green-dark;
-          font-size: 1.2rem;
-          width: 1.6rem;
-          text-align: center;
-        }
-
-        span {
-          font-weight: 500;
-          color: $text-dark;
-          font-size: 0.95rem;
-        }
-      }
     }
   }
 
@@ -100,13 +75,18 @@
         &.img-wide { height: 180px; }
       }
     }
-    .about-text .about-values {
-      grid-template-columns: 1fr 1fr;
+    .about-text h2 {
+      font-size: 1.1rem;
     }
   }
 
   @media (max-width: $mobile) {
-    .about-text h2 { font-size: 1.8rem; }
+    .about-text h2 {
+      font-size: 1rem;
+    }
+    .about-text p {
+      font-size: 0.95rem;
+    }
     .about-images {
       grid-template-columns: 1fr;
       img {
@@ -114,6 +94,5 @@
         &.img-wide { grid-column: span 1; height: 180px; }
       }
     }
-    .about-text .about-values { grid-template-columns: 1fr; }
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
+import logoSmall from '../assets/images/logonav.png'; // Usamos el mismo logo, escalado
 
 const Navbar = () => {
   const { language, toggleLanguage } = useLanguage();
@@ -15,6 +16,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo" onClick={() => scrollTo('hero')}>
+          <img src={logoSmall} alt="Meridian Studio" className="nav-logo-img" />
           <span className="logo-text">MERIDIAN</span>
         </div>
         <div className="navbar-links">
